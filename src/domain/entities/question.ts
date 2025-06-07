@@ -10,7 +10,4 @@ interface QuestionProps {
 }
 
 export class Question extends Entity<QuestionProps> {
-  constructor(props: QuestionProps, id?: string) {
-    super(props, id)
-  }
 }
