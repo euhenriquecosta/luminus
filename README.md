@@ -1,8 +1,8 @@
-# 🌟 Luminus: Seu Hub de Conhecimento e Discussão
+# 💡 Luminus: Seu Hub de Conhecimento e Discussão
 
 **Luminus** é um serviço interativo de gerenciamento de fóruns, criado para facilitar perguntas, respostas e discussões entre alunos e instrutores.
 
-## ✨ Recursos
+## Recursos
 
 - **Interface de Fórum**  
   Design simples e intuitivo para facilitar a criação e leitura de discussões.
