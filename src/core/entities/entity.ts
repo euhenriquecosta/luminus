@@ -1,4 +1,4 @@
-import { UniqueEntityId } from "./unique-entity-id.vo.js";
+import { UniqueEntityId } from "@/core/entities/unique-entity-id.vo.js";
 
 export class Entity<TProps> {
   private _id: UniqueEntityId;

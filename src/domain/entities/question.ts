@@ -1,9 +1,9 @@
-import { Slug } from "./value-objects/slug.js";
+import { Slug } from "@/domain/entities/value-objects/slug.js";
 
-import { Entity } from "../../core/entities/entity.js";
-import { UniqueEntityId } from "../../core/entities/unique-entity-id.vo.js";
+import { Entity } from "@/core/entities/entity.js";
+import { UniqueEntityId } from "@/core/entities/unique-entity-id.vo.js";
 
-import { Optional } from "../../core/types/optional.js";
+import { Optional } from "@/core/types/optional.js";
 
 interface QuestionProps {
   authorId: UniqueEntityId;
