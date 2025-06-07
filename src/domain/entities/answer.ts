@@ -1,9 +1,12 @@
 import { Entity } from "../../core/entities/entity.js";
+import { UniqueEntityId } from "../../core/entities/unique-entity-id.vo.js";
 
 interface AnswerProps {
+  authorId: UniqueEntityId;
+  questionId: UniqueEntityId;
   content: string;
-  authorId: string;
-  questionId: string;
+  createdAt: Date;
+  updatedAt?: Date;
 }
 
 export class Answer extends Entity<AnswerProps> {
