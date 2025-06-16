@@ -1,9 +1,9 @@
 import test from 'node:test'
 import assert from 'node:assert'
 
-import { AnswerQuestionUseCase } from '@/domain/use-cases/answer-question.js'
-import { AnswersRepository } from '@/domain/repositories/answers.repository.js'
-import { Answer } from '@/domain/entities/answer.js'
+import { AnswerQuestionUseCase } from '@/domain/forum/application/use-cases/answer-question.js'
+import { AnswersRepository } from '@/domain/forum/application/repositories/answers.repository.js'
+import { Answer } from '@/domain/forum/enterprise/entities/answer.js'
 
 const fakeAnswerRepository: AnswersRepository = {
   create: async (answer: Answer) => {},
