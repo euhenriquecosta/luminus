@@ -1,5 +1,5 @@
 export class Slug {
-  public value: string;
+  public value: string
 
   constructor(value: string) {
     this.value = value
@@ -7,9 +7,9 @@ export class Slug {
 
   /**
    * Receives a string and normalize it as a slug.
-   * 
+   *
    * Example: "An example title" => "an-example-title"
-   * 
+   *
    * @param text {string}
    */
   static createFromText(text: string) {
@@ -21,7 +21,7 @@ export class Slug {
       .replace(/[^\w-]+/g, '')
       .replace(/_/g, '-')
       .replace(/--+/g, '-')
-     .replace(/-$/g, '')
+      .replace(/-$/g, '')
 
     return new Slug(slugText)
   }

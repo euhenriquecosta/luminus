@@ -1,24 +1,22 @@
 import test from 'node:test'
 import assert from 'node:assert'
 
-import { AnswerQuestionUseCase } from '@/domain/use-cases/answer-question.js';
-import { AnswersRepository } from '@/domain/repositories/answers.repository.js';
-import { Answer } from '@/domain/entities/answer.js';
+import { AnswerQuestionUseCase } from '@/domain/use-cases/answer-question.js'
+import { AnswersRepository } from '@/domain/repositories/answers.repository.js'
+import { Answer } from '@/domain/entities/answer.js'
 
 const fakeAnswerRepository: AnswersRepository = {
-  create: async (answer: Answer) => {
-    return
-  }
+  create: async (answer: Answer) => {},
 }
 
 test('deve ser criado uma resposta', async () => {
-  const answerQuestion = new AnswerQuestionUseCase(fakeAnswerRepository);
+  const answerQuestion = new AnswerQuestionUseCase(fakeAnswerRepository)
 
   const answer = await answerQuestion.execute({
     questionId: '1',
     instructorId: '1',
-    content: 'Nova resposta'
+    content: 'Nova resposta',
   })
 
   assert.equal(answer.content, 'Nova resposta')
-});
+})
