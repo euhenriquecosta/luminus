@@ -3,8 +3,8 @@ import assert from 'node:assert'
 
 import { GetQuestionBySlugUseCase } from './get-question-by-slug.js'
 import { InMemoryQuestionRepository } from 'test/repositories/in-memory-question.repository.js'
-import { Question } from '../../enterprise/entities/question.js'
-import { UniqueEntityId } from '@/core/entities/unique-entity-id.vo.js'
+
+import { makeQuestion } from 'test/factories/make-question.factory.js'
 import { Slug } from '../../enterprise/entities/value-objects/slug.js'
 
 let inMemoryQuestionRepository: InMemoryQuestionRepository
@@ -17,10 +17,7 @@ describe('Get Question By Slug', () => {
   })
 
   it('deve ser possivel encontrar uma pergunta pela slug', async () => {
-    const newQuestion = Question.create({
-      authorId: new UniqueEntityId,
-      title: "Pergunta Exemplo",
-      content: "Conteudo",
+    const newQuestion = makeQuestion({
       slug: new Slug("pergunta-exemplo")
     })
 

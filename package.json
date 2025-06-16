@@ -16,6 +16,7 @@
     "lint:fix": "eslint src --ext .ts --fix"
   },
   "devDependencies": {
+    "@faker-js/faker": "^9.8.0",
     "@rocketseat/eslint-config": "^2.2.2",
     "@types/node": "^22.15.30",
     "eslint": "^8.57.1",

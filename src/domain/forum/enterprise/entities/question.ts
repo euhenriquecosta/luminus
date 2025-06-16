@@ -5,7 +5,7 @@ import { UniqueEntityId } from '@/core/entities/unique-entity-id.vo.js'
 
 import { Optional } from '@/core/types/optional.js'
 
-interface QuestionProps {
+export interface QuestionProps {
   authorId: UniqueEntityId
   bestAnswerId?: UniqueEntityId
   title: string
@@ -91,4 +91,6 @@ export class Question extends Entity<QuestionProps> {
 
     return question
   }
+
+  
 }
