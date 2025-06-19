@@ -5,8 +5,7 @@ interface DeleteAnswerUseCaseRequest {
   answerId: string
 }
 
-interface DeleteAnswerUseCaseResponse {
-}
+interface DeleteAnswerUseCaseResponse {}
 
 export class DeleteAnswerUseCase {
   constructor(private answersRepository: AnswersRepository) {}

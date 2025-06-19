@@ -1,5 +1,5 @@
-import { beforeEach, describe, it } from 'node:test'
 import assert from 'node:assert'
+import { beforeEach, describe, it } from 'node:test'
 
 import { CreateQuestionUseCase } from '@/domain/forum/application/use-cases/create-question.js'
 import { InMemoryQuestionRepository } from 'test/repositories/in-memory-question.repository.js'

@@ -1,6 +1,6 @@
 import { UniqueEntityId } from '@/core/entities/unique-entity-id.vo.js'
-import { Answer } from '@/domain/forum/enterprise/entities/answer.js'
 import { AnswersRepository } from '@/domain/forum/application/repositories/answers.repository.js'
+import { Answer } from '@/domain/forum/enterprise/entities/answer.js'
 
 interface AnswerQuestionUseCaseRequest {
   instructorId: string
@@ -29,7 +29,7 @@ export class AnswerQuestionUseCase {
     await this.answersRepository.create(answer)
 
     return {
-      answer
+      answer,
     }
   }
 }

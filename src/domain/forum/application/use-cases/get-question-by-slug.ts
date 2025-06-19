@@ -2,7 +2,7 @@ import { Question } from '@/domain/forum/enterprise/entities/question.js'
 import { QuestionsRepository } from '@/domain/forum/application/repositories/questions.repository.js'
 
 interface GetQuestionBySlugUseCaseRequest {
-  slug: string;
+  slug: string
 }
 
 interface GetQuestionBySlugUseCaseResponse {
@@ -13,7 +13,7 @@ export class GetQuestionBySlugUseCase {
   constructor(private questionsRepository: QuestionsRepository) {}
 
   async execute({
-    slug
+    slug,
   }: GetQuestionBySlugUseCaseRequest): Promise<GetQuestionBySlugUseCaseResponse> {
     const question = await this.questionsRepository.findBySlug(slug)
 
@@ -22,7 +22,7 @@ export class GetQuestionBySlugUseCase {
     }
 
     return {
-      question
+      question,
     }
   }
 }

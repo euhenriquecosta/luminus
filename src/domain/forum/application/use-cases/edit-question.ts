@@ -9,7 +9,7 @@ interface EditQuestionUseCaseRequest {
 }
 
 interface EditQuestionUseCaseResponse {
-	question: Question
+  question: Question
 }
 
 export class EditQuestionUseCase {
@@ -19,7 +19,7 @@ export class EditQuestionUseCase {
     questionId,
     authorId,
     title,
-    content
+    content,
   }: EditQuestionUseCaseRequest): Promise<EditQuestionUseCaseResponse> {
     const question = await this.questionsRepository.findById(questionId)
 
@@ -31,13 +31,13 @@ export class EditQuestionUseCase {
       throw new Error('Não permitido.')
     }
 
-		question.title = title
-		question.content = content
+    question.title = title
+    question.content = content
 
     await this.questionsRepository.save(question)
 
     return {
-			question
-		}
+      question,
+    }
   }
 }

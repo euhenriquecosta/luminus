@@ -1,5 +1,5 @@
-import { beforeEach, describe, it } from 'node:test'
 import assert from 'node:assert'
+import { beforeEach, describe, it } from 'node:test'
 
 import { AnswerQuestionUseCase } from '@/domain/forum/application/use-cases/answer-question.js'
 import { InMemoryAnswerRepository } from 'test/repositories/in-memory-answers.repository.js'
@@ -19,7 +19,7 @@ describe('Answer Question', () => {
       instructorId: '1',
       content: 'Nova resposta',
     })
-    
+
     assert.ok(answer.id)
     assert.equal(inMemoryAnswerRepository.items[0].id, answer.id)
   })

@@ -5,8 +5,7 @@ interface DeleteQuestionUseCaseRequest {
   questionId: string
 }
 
-interface DeleteQuestionUseCaseResponse {
-}
+interface DeleteQuestionUseCaseResponse {}
 
 export class DeleteQuestionUseCase {
   constructor(private questionsRepository: QuestionsRepository) {}

@@ -91,6 +91,4 @@ export class Question extends Entity<QuestionProps> {
 
     return question
   }
-
-  
 }

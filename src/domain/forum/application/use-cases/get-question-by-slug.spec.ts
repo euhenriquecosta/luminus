@@ -13,20 +13,20 @@ let sut: GetQuestionBySlugUseCase
 describe('Get Question By Slug', () => {
   beforeEach(() => {
     inMemoryQuestionRepository = new InMemoryQuestionRepository()
-    sut = new GetQuestionBySlugUseCase(inMemoryQuestionRepository);
+    sut = new GetQuestionBySlugUseCase(inMemoryQuestionRepository)
   })
 
   it('deve ser possivel encontrar uma pergunta pela slug', async () => {
     const newQuestion = makeQuestion({
-      slug: new Slug("pergunta-exemplo")
+      slug: new Slug('pergunta-exemplo'),
     })
 
     inMemoryQuestionRepository.create(newQuestion)
-    
+
     const { question } = await sut.execute({
-      slug: 'pergunta-exemplo'
+      slug: 'pergunta-exemplo',
     })
-    
+
     assert.ok(question.id)
     assert.equal(question.title, newQuestion.title)
   })
